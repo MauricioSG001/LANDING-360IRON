@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Banca urbana</title>
+  <desc id="desc">Ilustracion de banca de acero y madera en plaza.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7fbff"/>
+      <stop offset="100%" stop-color="#d9e3ef"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#69462f"/>
+      <stop offset="100%" stop-color="#8d684e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <rect y="610" width="1200" height="290" fill="#d6d8dc"/>
+  <rect y="675" width="1200" height="225" fill="#c8cbd0"/>
+  <rect x="910" y="130" width="130" height="280" rx="8" fill="#d2dbe6"/>
+  <rect x="1040" y="110" width="90" height="300" rx="8" fill="#c7d1dd"/>
+  <rect x="940" y="160" width="36" height="250" fill="#9aa6b5" opacity="0.6"/>
+  <rect x="180" y="180" width="100" height="220" rx="50" fill="#9dc272"/>
+  <circle cx="202" cy="192" r="60" fill="#94ba66"/>
+  <circle cx="262" cy="180" r="70" fill="#88af5f"/>
+  <circle cx="230" cy="145" r="54" fill="#9bc570"/>
+  <g transform="translate(155 330)">
+    <path d="M30 340l50-260h118l-52 260z" fill="#1e2430"/>
+    <path d="M590 338l-48-260h118l48 260z" fill="#1e2430"/>
+    <path d="M120 74h440c18 0 34 10 42 26l40 79H112l-34-56c-25-42 4-95 52-95z" fill="#1f2632"/>
+    <path d="M158 92h390c8 0 15 5 18 12l18 38H138l9-31c2-11 11-19 21-19z" fill="#121923"/>
+    <g fill="url(#wood)">
+      <rect x="175" y="112" width="350" height="18" rx="8"/>
+      <rect x="170" y="142" width="360" height="18" rx="8"/>
+      <rect x="165" y="172" width="370" height="18" rx="8"/>
+      <rect x="160" y="202" width="380" height="18" rx="8"/>
+      <rect x="155" y="232" width="390" height="18" rx="8"/>
+    </g>
+  </g>
+</svg>

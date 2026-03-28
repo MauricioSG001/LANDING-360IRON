@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" role="img" aria-labelledby="title desc">
+  <title id="title">Escalera metalica</title>
+  <desc id="desc">Ilustracion de escalera estructural con barandas oscuras.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#efefef"/>
+      <stop offset="100%" stop-color="#c7ccd1"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="900" fill="url(#wall)"/>
+  <rect y="724" width="700" height="176" fill="#b5babf"/>
+  <g transform="translate(80 180)">
+    <path d="M40 470h470v40H40z" fill="#2a3039"/>
+    <path d="M90 402h420v38H90z" fill="#353c47"/>
+    <path d="M140 334h370v38H140z" fill="#414955"/>
+    <path d="M190 266h320v38H190z" fill="#4a5360"/>
+    <path d="M240 198h270v38H240z" fill="#57616e"/>
+    <path d="M290 130h220v38H290z" fill="#626d7b"/>
+    <path d="M340 62h170v38H340z" fill="#6d7887"/>
+    <rect x="24" y="54" width="22" height="496" fill="#1b2128"/>
+    <rect x="506" y="32" width="22" height="518" fill="#1b2128"/>
+    <path d="M28 50l360-72 6 22L34 70z" fill="#1c2430"/>
+    <path d="M84 394l102-194 28 6-101 194z" fill="#262d37"/>
+  </g>
+</svg>

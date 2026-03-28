@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" role="img" aria-labelledby="title desc">
+  <title id="title">Detalle de soldadura</title>
+  <desc id="desc">Ilustracion de primer plano de soldadura con destellos.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#302a1e"/>
+      <stop offset="45%" stop-color="#161d29"/>
+      <stop offset="100%" stop-color="#0d131d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="72%" r="28%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="15%" stop-color="#86d7ff"/>
+      <stop offset="35%" stop-color="#fbd38d"/>
+      <stop offset="100%" stop-color="rgba(251,211,141,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="700" height="900" fill="url(#bg)"/>
+  <rect x="48" y="95" width="604" height="712" rx="16" fill="#1a2230" opacity="0.45"/>
+  <path d="M118 657c90-232 174-369 253-408 46-22 94-16 140 14-68 30-119 90-162 176-38 77-70 179-93 310z" fill="#232d3a"/>
+  <path d="M158 642c63-114 129-178 199-192 38-8 80 0 124 21-57 26-103 71-145 136-27 42-57 96-83 163z" fill="#313d4b"/>
+  <circle cx="318" cy="431" r="86" fill="#1a212d"/>
+  <path d="M266 430c14-38 48-58 100-42 10 21 10 42 2 64-41-2-70-8-102-22z" fill="#2a3442"/>
+  <circle cx="470" cy="646" r="166" fill="url(#glow)"/>
+  <rect x="362" y="612" width="168" height="18" rx="9" fill="#566070"/>
+  <rect x="280" y="680" width="225" height="18" rx="9" fill="#495361"/>
+  <g fill="#ffb454">
+    <circle cx="492" cy="610" r="5"/>
+    <circle cx="520" cy="628" r="4"/>
+    <circle cx="548" cy="650" r="5"/>
+    <circle cx="584" cy="675" r="4"/>
+    <circle cx="450" cy="640" r="4"/>
+    <circle cx="426" cy="680" r="3"/>
+    <circle cx="538" cy="712" r="4"/>
+  </g>
+  <g stroke="#ffb454" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <path d="M468 650l120-52"/>
+    <path d="M458 664l80 98"/>
+    <path d="M450 642l-108-46"/>
+    <path d="M470 676l125 32"/>
+    <path d="M438 680l-75 98"/>
+  </g>
+</svg>

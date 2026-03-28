@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" role="img" aria-labelledby="title desc">
+  <title id="title">Operario en taller metalico</title>
+  <desc id="desc">Ilustracion de soldadura en un entorno industrial oscuro.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b2432"/>
+      <stop offset="100%" stop-color="#0f141d"/>
+    </linearGradient>
+    <radialGradient id="spark" cx="68%" cy="63%" r="28%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="18%" stop-color="#86d6ff"/>
+      <stop offset="42%" stop-color="#ffb24a"/>
+      <stop offset="100%" stop-color="rgba(255,178,74,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="700" height="900" fill="url(#bg)"/>
+  <rect x="40" y="70" width="620" height="730" rx="12" fill="#232c39" stroke="#374253" stroke-width="6"/>
+  <rect x="82" y="130" width="536" height="46" rx="6" fill="#17202d"/>
+  <rect x="110" y="230" width="210" height="460" fill="#1a222e"/>
+  <rect x="348" y="208" width="212" height="490" fill="#131a24"/>
+  <path d="M330 200l-40 120 55 170-82 165h82l102-170-42-134 28-109z" fill="#2b3544"/>
+  <path d="M274 262c22-42 76-61 120-44l34 14-35 78-119-48z" fill="#3c4654"/>
+  <circle cx="405" cy="286" r="68" fill="#1d2430"/>
+  <path d="M363 285c12-43 76-47 96-10 8 15 9 29 5 45-45-6-73-12-101-35z" fill="#2c3644"/>
+  <rect x="455" y="350" width="120" height="16" rx="8" fill="#5c6778"/>
+  <rect x="380" y="528" width="200" height="18" rx="9" fill="#5b6574"/>
+  <rect x="436" y="470" width="28" height="76" rx="10" fill="#323c4a"/>
+  <rect x="318" y="618" width="226" height="18" rx="9" fill="#425061"/>
+  <circle cx="474" cy="567" r="154" fill="url(#spark)" opacity="0.95"/>
+  <g fill="#ff9c3b">
+    <circle cx="530" cy="506" r="5"/>
+    <circle cx="564" cy="532" r="4"/>
+    <circle cx="505" cy="560" r="4"/>
+    <circle cx="552" cy="584" r="5"/>
+    <circle cx="580" cy="610" r="4"/>
+    <circle cx="522" cy="635" r="3"/>
+    <circle cx="462" cy="603" r="4"/>
+  </g>
+  <g stroke="#ff9c3b" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <path d="M486 560l126-40"/>
+    <path d="M474 564l88-88"/>
+    <path d="M482 576l124 42"/>
+    <path d="M470 588l65 108"/>
+    <path d="M455 586l-28 120"/>
+    <path d="M450 564l-92 -34"/>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Mesa de comedor industrial</title>
+  <desc id="desc">Ilustracion de mesa de comedor con cubierta de madera y base metalica.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3c3c3c"/>
+      <stop offset="100%" stop-color="#2d2d2d"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ad7b4b"/>
+      <stop offset="100%" stop-color="#8e633d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect y="700" width="1200" height="200" fill="#2a2a2a"/>
+  <ellipse cx="600" cy="690" rx="330" ry="52" fill="#232323"/>
+  <g transform="translate(200 250)">
+    <rect x="100" y="70" width="600" height="52" rx="12" fill="url(#wood)"/>
+    <rect x="120" y="122" width="560" height="18" rx="9" fill="#b98858" opacity="0.65"/>
+    <path d="M176 122l-74 360h70l66-360z" fill="#1f2430"/>
+    <path d="M660 122l66 360h70l-74-360z" fill="#1f2430"/>
+    <path d="M312 122l-56 350h66l48-350z" fill="#343c47"/>
+    <path d="M488 122l48 350h66l-56-350z" fill="#343c47"/>
+  </g>
+  <circle cx="460" cy="420" r="72" fill="#575757" opacity="0.25"/>
+  <circle cx="760" cy="400" r="58" fill="#707070" opacity="0.18"/>
+  <text x="600" y="530" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="92" fill="#8e8e8e">Mesa Comedor</text>
+</svg>

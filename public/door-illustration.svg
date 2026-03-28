@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" role="img" aria-labelledby="title desc">
+  <title id="title">Puerta metalica</title>
+  <desc id="desc">Ilustracion de puerta de acceso moderna en acero.</desc>
+  <rect width="700" height="900" fill="#3a3939"/>
+  <rect x="100" y="86" width="500" height="730" rx="20" fill="#1c2430" stroke="#465160" stroke-width="8"/>
+  <rect x="140" y="126" width="420" height="650" rx="12" fill="#2d2d2d"/>
+  <path d="M170 160h360v200H170z" fill="#474747"/>
+  <path d="M170 394h360v340H170z" fill="#323232"/>
+  <rect x="206" y="184" width="290" height="14" rx="7" fill="#575757"/>
+  <rect x="206" y="214" width="290" height="14" rx="7" fill="#575757"/>
+  <rect x="206" y="244" width="290" height="14" rx="7" fill="#575757"/>
+  <rect x="206" y="274" width="290" height="14" rx="7" fill="#575757"/>
+  <circle cx="156" cy="126" r="9" fill="#9e6cd7"/>
+  <circle cx="474" cy="466" r="10" fill="#d5d7dc"/>
+  <rect x="486" y="456" width="38" height="20" rx="10" fill="#c6c8cc"/>
+  <path d="M150 754h400" stroke="#565f6d" stroke-width="6"/>
+</svg>
