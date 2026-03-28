@@ -103,16 +103,19 @@ function App() {
   const [activeResidential, setActiveResidential] = useState(
     residentialCategories[0],
   )
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <div className="bg-slate-50 text-slate-700">
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur">
-        <div className="mx-auto flex max-w-[1500px] flex-wrap items-center justify-between gap-4 px-4 py-4 sm:flex-nowrap sm:px-5 lg:px-8">
+        <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-4 px-4 py-4 sm:px-5 lg:px-8">
           <a href="#inicio" className="flex items-center gap-2 sm:gap-3">
-            <span className="text-[2rem] font-black leading-none tracking-[-0.08em] text-slate-900 sm:text-[2.6rem]">
-              360
-            </span>
-            <span className="border-2 border-red-500 px-2 py-1 text-[1.5rem] font-black leading-none tracking-[-0.08em] text-red-500 sm:text-[2rem]">
+            <img
+              src="/images/Logo.jpg"
+              alt="360IRON"
+              className="h-11 w-auto object-contain sm:h-14"
+            />
+            <span className="border-2 border-[#eb7215] px-2 py-1 text-[1.5rem] font-black leading-none tracking-[-0.08em] text-[#eb7215] sm:text-[2rem]">
               IRON
             </span>
             <span className="hidden text-xs font-bold uppercase tracking-[0.22em] text-slate-500 md:block">
@@ -120,9 +123,9 @@ function App() {
             </span>
           </a>
 
-          <nav className="flex flex-1 flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm font-bold text-slate-700 sm:gap-5 lg:gap-10 lg:text-base">
+          <nav className="hidden flex-1 items-center justify-center gap-x-4 gap-y-2 text-sm font-bold text-slate-700 md:flex md:gap-5 lg:gap-10 lg:text-base">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="transition hover:text-red-500">
+              <a key={link.href} href={link.href} className="transition hover:text-[#eb7215]">
                 {link.label}
               </a>
             ))}
@@ -130,10 +133,62 @@ function App() {
 
           <a
             href="#contacto"
-            className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-red-500 px-6 text-base font-extrabold text-white shadow-[0_10px_24px_rgba(239,68,68,0.28)] transition hover:-translate-y-0.5 sm:min-h-14 sm:px-8 sm:text-lg"
+            className="hidden min-h-12 shrink-0 items-center justify-center rounded-full bg-[#eb7215] px-6 text-base font-extrabold text-white shadow-[0_10px_24px_rgba(235,114,21,0.28)] transition hover:-translate-y-0.5 md:inline-flex md:min-h-14 md:px-8 md:text-lg"
           >
             Cotizar
           </a>
+
+          <button
+            type="button"
+            aria-label={mobileMenuOpen ? 'Cerrar menu' : 'Abrir menu'}
+            aria-expanded={mobileMenuOpen}
+            onClick={() => setMobileMenuOpen((current) => !current)}
+            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 text-slate-900 transition hover:border-[#eb7215]/40 hover:text-[#eb7215] md:hidden"
+          >
+            <span className="flex flex-col gap-1.5">
+              <span
+                className={`block h-0.5 w-5 rounded-full bg-current transition ${
+                  mobileMenuOpen ? 'translate-y-2 rotate-45' : ''
+                }`}
+              />
+              <span
+                className={`block h-0.5 w-5 rounded-full bg-current transition ${
+                  mobileMenuOpen ? 'opacity-0' : ''
+                }`}
+              />
+              <span
+                className={`block h-0.5 w-5 rounded-full bg-current transition ${
+                  mobileMenuOpen ? '-translate-y-2 -rotate-45' : ''
+                }`}
+              />
+            </span>
+          </button>
+        </div>
+
+        <div
+          className={`border-t border-slate-200 px-4 py-4 shadow-sm md:hidden ${
+            mobileMenuOpen ? 'block' : 'hidden'
+          }`}
+        >
+          <nav className="mx-auto flex max-w-[1500px] flex-col gap-3 text-base font-bold text-slate-700">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="rounded-xl px-3 py-2 transition hover:bg-[#eb7215]/10 hover:text-[#eb7215]"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href="#contacto"
+              onClick={() => setMobileMenuOpen(false)}
+              className="mt-2 inline-flex min-h-12 items-center justify-center rounded-full bg-[#eb7215] px-6 text-base font-extrabold text-white shadow-[0_10px_24px_rgba(235,114,21,0.28)] transition hover:-translate-y-0.5"
+            >
+              Cotizar
+            </a>
+          </nav>
         </div>
       </header>
 
@@ -151,16 +206,16 @@ function App() {
                 backgroundPosition: 'center',
               }}
             >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_84%,rgba(248,113,113,.22),transparent_13%),linear-gradient(180deg,rgba(12,18,30,.12),rgba(12,18,30,.2))]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_84%,rgba(235,114,21,.22),transparent_13%),linear-gradient(180deg,rgba(12,18,30,.12),rgba(12,18,30,.2))]" />
 
               <div className="relative flex h-full max-w-[780px] flex-col justify-center px-4 py-12 sm:px-8 sm:py-16 lg:px-16">
-                <p className="mb-5 inline-flex items-center gap-3 text-sm font-black uppercase tracking-[0.08em] text-red-500 sm:mb-6 sm:text-lg">
-                  <span className="h-1 w-8 bg-red-500 sm:w-12" />
+                <p className="mb-5 inline-flex items-center gap-3 text-sm font-black uppercase tracking-[0.08em] text-[#eb7215] sm:mb-6 sm:text-lg">
+                  <span className="h-1 w-8 bg-[#eb7215] sm:w-12" />
                   Diseno y fabricacion
                 </p>
 
                 <h1 className="max-w-[10ch] text-[2.9rem] font-black leading-[0.92] tracking-[-0.08em] text-white sm:max-w-[9ch] sm:text-6xl lg:text-7xl xl:text-[6.2rem]">
-                  Soluciones en <span className="block text-red-500">ACERO</span>
+                  Soluciones en <span className="block text-[#eb7215]">ACERO</span>
                 </h1>
 
                 <p className="mt-5 max-w-[36rem] text-base leading-7 text-slate-200 sm:mt-6 sm:text-lg sm:leading-8 lg:text-[1.45rem]">
@@ -171,7 +226,7 @@ function App() {
                 <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
                   <a
                     href="#urbano"
-                    className="inline-flex min-h-12 items-center justify-center rounded-full bg-red-500 px-6 text-base font-extrabold text-white transition hover:-translate-y-0.5 sm:min-h-14 sm:px-8 sm:text-lg"
+                    className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#eb7215] px-6 text-base font-extrabold text-white transition hover:-translate-y-0.5 sm:min-h-14 sm:px-8 sm:text-lg"
                   >
                     Ver Productos
                   </a>
@@ -213,13 +268,13 @@ function App() {
             </div>
 
             <div>
-              <span className="inline-block h-6 w-6 rounded-full bg-red-100" />
+              <span className="inline-block h-6 w-6 rounded-full bg-[#eb7215]/15" />
               <p className="mt-3 text-sm font-black uppercase tracking-[0.2em] text-slate-900">
                 Espacios Publicos
               </p>
               <h2 className="mt-2 text-[2.4rem] font-black uppercase leading-[0.92] tracking-[-0.08em] text-slate-900 sm:text-5xl lg:text-6xl xl:text-[5.2rem]">
                 <span className="block">{activeUrban.heading}</span>
-                <span className="block text-red-500">{activeUrban.accent}</span>
+                <span className="block text-[#eb7215]">{activeUrban.accent}</span>
               </h2>
               <p className="mt-5 max-w-[36rem] text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
                 {activeUrban.description}
@@ -236,8 +291,8 @@ function App() {
                       onClick={() => setActiveUrban(item)}
                       className={`rounded-2xl px-5 py-5 text-left transition sm:px-6 sm:py-6 ${
                         isActive
-                          ? 'border border-red-200 bg-red-50 shadow-[inset_4px_0_0_0_rgb(239,68,68)]'
-                          : 'border border-slate-100 bg-slate-50 hover:border-red-100 hover:bg-red-50/40'
+                          ? 'border border-[#eb7215]/25 bg-[#eb7215]/10 shadow-[inset_4px_0_0_0_rgb(235,114,21)]'
+                          : 'border border-slate-100 bg-slate-50 hover:border-[#eb7215]/20 hover:bg-[#eb7215]/5'
                       }`}
                     >
                       <h3 className="text-xl font-black text-slate-900 sm:text-2xl">{item.title}</h3>
@@ -258,7 +313,7 @@ function App() {
         >
           <div className="mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(340px,.95fr)] lg:gap-16">
             <div>
-              <p className="text-sm font-black uppercase tracking-[0.2em] text-red-400">
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-[#eb7215]">
                 Residencial
               </p>
               <h2 className="mt-5 max-w-[8ch] text-[2.6rem] font-black leading-[0.92] tracking-[-0.08em] sm:text-5xl lg:text-6xl xl:text-[5.2rem]">
@@ -283,7 +338,7 @@ function App() {
                           : 'border border-slate-700 bg-slate-800/60 hover:border-slate-500 hover:bg-slate-800/85'
                       }`}
                     >
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-500 text-lg font-black text-white">
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#eb7215] text-lg font-black text-white">
                         {item.id === 'escaleras'
                           ? '1'
                           : item.id === 'puertas'
@@ -324,13 +379,13 @@ function App() {
         <section id="muebles" className="bg-slate-50 px-4 py-16 sm:px-5 sm:py-20 lg:px-10 lg:py-24">
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto max-w-[760px] text-center">
-              <p className="inline-flex rounded-full bg-red-100 px-4 py-2 text-sm font-black uppercase tracking-[0.18em] text-red-500">
+              <p className="inline-flex rounded-full bg-[#eb7215]/15 px-4 py-2 text-sm font-black uppercase tracking-[0.18em] text-[#eb7215]">
                 Interior &amp; Exterior
               </p>
               <h2 className="mt-5 text-[3rem] font-black uppercase leading-[0.95] tracking-[-0.08em] text-slate-900 sm:text-6xl lg:text-7xl">
                 Muebles
               </h2>
-              <span className="mt-4 inline-block h-2 w-28 rounded-full bg-red-500" />
+              <span className="mt-4 inline-block h-2 w-28 rounded-full bg-[#eb7215]" />
               <p className="mt-6 text-base leading-7 text-slate-600 sm:mt-7 sm:text-lg sm:leading-8">
                 Fusionamos la resistencia del fierro con la calidez de la madera
                 para crear piezas unicas.
@@ -353,7 +408,7 @@ function App() {
                   <div className="flex h-[200px] flex-col bg-[#363636] px-5 py-6 sm:h-[200px] sm:px-7 sm:py-7">
                     <span
                       className={`mb-4 inline-block h-3 w-3 rounded-full ${
-                        index === 1 ? 'bg-red-500' : 'bg-violet-400'
+                        'bg-[#eb7215]'
                       }`}
                     />
                     <h3 className="text-3xl font-black text-white sm:text-4xl">{item.title}</h3>
@@ -370,15 +425,17 @@ function App() {
         id="contacto"
         className="relative bg-[radial-gradient(circle_at_bottom_right,rgba(51,65,85,0.25),transparent_20%),linear-gradient(180deg,#141c2d_0%,#101827_100%)] px-4 pb-12 pt-9 text-slate-300 sm:px-5 lg:px-10"
       >
-        <div className="absolute left-0 right-0 top-0 h-2 bg-red-500" />
+        <div className="absolute left-0 right-0 top-0 h-2 bg-[#eb7215]" />
 
         <div className="mx-auto grid max-w-[1500px] gap-10 pt-10 lg:grid-cols-[1.15fr_.95fr_1fr_1.2fr] lg:gap-12">
           <div>
             <a href="#inicio" className="flex items-center gap-3">
-              <span className="text-[2rem] font-black leading-none tracking-[-0.08em] text-white sm:text-[2.6rem]">
-                360
-              </span>
-              <span className="border-2 border-red-500 px-2 py-1 text-[1.5rem] font-black leading-none tracking-[-0.08em] text-white sm:text-[2rem]">
+              <img
+                src="/images/Logo.jpg"
+                alt="360IRON"
+                className="h-11 w-auto object-contain sm:h-14"
+              />
+              <span className="border-2 border-[#eb7215] px-2 py-1 text-[1.5rem] font-black leading-none tracking-[-0.08em] text-white sm:text-[2rem]">
                 IRON
               </span>
             </a>
@@ -424,21 +481,21 @@ function App() {
               <input
                 type="text"
                 placeholder="Nombre"
-                className="rounded-md border border-slate-700 bg-slate-800/80 px-4 py-4 text-white outline-none placeholder:text-slate-400 focus:border-red-400"
+                className="rounded-md border border-slate-700 bg-slate-800/80 px-4 py-4 text-white outline-none placeholder:text-slate-400 focus:border-[#eb7215]"
               />
               <input
                 type="email"
                 placeholder="Email"
-                className="rounded-md border border-slate-700 bg-slate-800/80 px-4 py-4 text-white outline-none placeholder:text-slate-400 focus:border-red-400"
+                className="rounded-md border border-slate-700 bg-slate-800/80 px-4 py-4 text-white outline-none placeholder:text-slate-400 focus:border-[#eb7215]"
               />
               <textarea
                 placeholder="Mensaje"
                 rows="4"
-                className="min-h-[110px] rounded-md border border-slate-700 bg-slate-800/80 px-4 py-4 text-white outline-none placeholder:text-slate-400 focus:border-red-400"
+                className="min-h-[110px] rounded-md border border-slate-700 bg-slate-800/80 px-4 py-4 text-white outline-none placeholder:text-slate-400 focus:border-[#eb7215]"
               />
               <button
                 type="button"
-                className="min-h-12 rounded-md bg-red-600 px-6 text-base font-extrabold text-white transition hover:bg-red-500 sm:min-h-14 sm:text-lg"
+                className="min-h-12 rounded-md bg-[#eb7215] px-6 text-base font-extrabold text-white transition hover:bg-[#d9640f] sm:min-h-14 sm:text-lg"
               >
                 Enviar Mensaje
               </button>
